@@ -1,7 +1,7 @@
 import {OneCommentMutation} from "../../../app/types";
 import {useAppDispatch} from "../../../app/hooks.ts";
 import {ChangeEvent, FormEvent, useState} from "react";
-import {createComment} from "../commentsThunks.ts";
+import {createComment, fetchComments} from "../commentsThunks.ts";
 import Grid from "@mui/material/Grid2";
 import {Button, TextField} from "@mui/material";
 
@@ -21,6 +21,7 @@ const CommentForm: React.FC<Props> = ({newsId}) => {
     const submitForm = (e: FormEvent) => {
         e.preventDefault();
         dispatch(createComment({...form, newsId}));
+        dispatch(fetchComments(newsId));
         setForm(initialState);
     };
 

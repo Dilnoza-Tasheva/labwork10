@@ -21,9 +21,10 @@ const Comments: React.FC<Props> = ({newsId}) => {
     }, [dispatch, newsId]);
 
 
-    const deleteComment = (commentId: string) => {
+    const deleteComment = async (commentId: string) => {
         if (window.confirm('Are you sure you want to delete this comment?')) {
             dispatch(deleteOneComment(commentId));
+            await dispatch(fetchComments(newsId || ''));
         }
     };
 

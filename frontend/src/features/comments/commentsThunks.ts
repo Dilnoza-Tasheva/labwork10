@@ -13,7 +13,7 @@ export const fetchComments = createAsyncThunk<OneComment[], string>(
 export const createComment = createAsyncThunk <void, OneCommentMutation>(
     'comments/createComment',
     async (comment) => {
-        await axiosApi.post('comments.json', {...comment});
+        await axiosApi.post('/comments', {...comment});
     }
 );
 
@@ -23,10 +23,3 @@ export const deleteOneComment = createAsyncThunk<void, string>(
         await axiosApi.delete(`comments/${commentId}`);
     }
 );
-
-
-
-
-
-
-

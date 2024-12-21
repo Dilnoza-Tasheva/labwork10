@@ -17,9 +17,10 @@ const News = () => {
         dispatch(fetchNews());
     }, [dispatch]);
 
-    const deleteOnePost = (newsId: string) => {
+    const deleteOnePost = async (newsId: string) => {
         if (window.confirm('Are you sure you want to delete this post?')) {
             dispatch(deleteOneNews(newsId));
+            await dispatch(fetchNews());
         }
     };
 
