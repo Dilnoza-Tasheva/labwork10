@@ -1,0 +1,26 @@
+{
+  "news": [
+    {
+      "id": "ca81f92e-6e8a-40c7-bd54-f7b3dd57bb56",
+      "title": "breaking news",
+      "content": "news content",
+      "image": "images/8ecd3a17-ad84-4027-8257-4172f06be98d.jpg",
+      "publicationDate": "2024-12-21T07:44:48.639Z"
+    },
+    {
+      "id": "c42d24c1-059e-4d2f-aa51-c5414f029547",
+      "title": "breaking news 3",
+      "content": "news content 3",
+      "image": "images/37411d7b-da18-40f0-9aea-bc4a6f66f9ed.jpg",
+      "publicationDate": "2024-12-21T07:45:15.338Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "8707c666-2726-4921-9837-f6385ca595d1",
+      "newsId": "c42d24c1-059e-4d2f-aa51-c5414f029547",
+      "author": "Dilnoza",
+      "text": "my commentary to the news"
+    }
+  ]
+}
