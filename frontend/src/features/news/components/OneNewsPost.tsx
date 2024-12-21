@@ -1,9 +1,12 @@
-
+import Comments from "../../comments/comments.tsx";
+import CommentForm from "../../comments/components/CommentForm.tsx";
 
 const OneNewsPost = () => {
+
     return (
         <div>
-            One post
+            <Comments newsId={selectedNewsId}/>
+            <CommentForm/>
         </div>
     );
 };
