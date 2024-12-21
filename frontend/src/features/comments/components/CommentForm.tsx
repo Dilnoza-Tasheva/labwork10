@@ -5,19 +5,22 @@ import {createComment} from "../commentsThunks.ts";
 import Grid from "@mui/material/Grid2";
 import {Button, TextField} from "@mui/material";
 
-const initialState: OneCommentMutation = {
-    newsId: '',
+interface Props {
+    newsId: string;
+}
+
+const initialState: Omit<OneCommentMutation, 'newsId'> = {
     author: '',
     text: '',
 };
 
-const CommentForm = () => {
+const CommentForm: React.FC<Props> = ({newsId}) => {
     const dispatch = useAppDispatch();
-    const [form, setForm] = useState<OneCommentMutation>(initialState);
+    const [form, setForm] = useState(initialState);
 
     const submitForm = (e: FormEvent) => {
         e.preventDefault();
-        dispatch(createComment(form));
+        dispatch(createComment({...form, newsId}));
         setForm(initialState);
     };
 

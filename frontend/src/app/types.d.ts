@@ -10,7 +10,6 @@ export interface NewsMutation{
     title: string;
     content: string;
     image?: File | null;
-    publicationDate: string;
 }
 
 export interface OneComment {

@@ -13,6 +13,13 @@
       "content": "news content 3",
       "image": "images/37411d7b-da18-40f0-9aea-bc4a6f66f9ed.jpg",
       "publicationDate": "2024-12-21T07:45:15.338Z"
+    },
+    {
+      "id": "a971a31e-1891-4bec-b58e-ca7432f70247",
+      "title": "breaking news 6",
+      "content": "Lorem ipsum",
+      "image": "images/24838e95-624e-480c-9049-f50edf0a26e7.jpg",
+      "publicationDate": "2024-12-21T12:02:52.005Z"
     }
   ],
   "comments": [

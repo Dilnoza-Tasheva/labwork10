@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid2";
 import {Button, Card, CardActions, CardContent, CircularProgress, Typography} from "@mui/material";
 
 interface Props {
-    newsId: string;
+    newsId: string | undefined;
 }
 
 const Comments: React.FC<Props> = ({newsId}) => {
@@ -29,9 +29,6 @@ const Comments: React.FC<Props> = ({newsId}) => {
 
     return (
         <Grid container direction={"column"} spacing={2}>
-            <Grid>
-                <Typography variant="h5">Comments</Typography>
-            </Grid>
 
             <Grid>
                 {fetchLoading ? (
